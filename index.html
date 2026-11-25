@@ -189,7 +189,15 @@
 
 <script>
   let cart = [];
+  
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  const SUPABASE_URL = 'https://rickrqxzdnhqjmsnytki.supabase.co';
+const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_J8u1NEambKmn1ZOxQ4as-Q_TeQDFpFX';
 
+const supabaseClient = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_PUBLISHABLE_KEY
+);
   function addProduct(name, selectId) {
     const size = document.getElementById(selectId).value;
     const price = name === 'Classic Tiramisu'
@@ -257,12 +265,3 @@
 </script>
 </body>
 </html>
-<script>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  const SUPABASE_URL = 'https://rickrqxzdnhqjmsnytki.supabase.co';
-const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_J8u1NEambKmn1ZOxQ4as-Q_TeQDFpFX';
-
-const supabaseClient = window.supabase.createClient(
-  SUPABASE_URL,
-  SUPABASE_PUBLISHABLE_KEY
-);
